@@ -1,0 +1,31 @@
+[{
+		"name": "BMW",
+		"colr": "green",
+		"rate": 10,
+		"available": true,
+		"thumb": "img/bmw.jpg"
+	},
+	{
+		"name": "VW",
+		"colr": "Yellow",
+		"rate": 15,
+		"available": true,
+		"thumb": "img/vw.jpg"
+
+	},
+	{
+		"name": "Benz",
+		"colr": "black",
+		"rate": 20,
+		"available": true,
+		"thumb": "img/benz.jpg"
+
+	},
+	{
+		"name": "Maybach",
+		"colr": "orange",
+		"rate": 25,
+		"available": true,
+		"thumb": "img/maybach.jpg"
+	}
+]
