@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newApp">
+<head>
+  <title>Spatlho App</title>
+  <link href="..\content\css\styles.css" rel="stylesheet" type="text/css" />
+   <script src="..\app\lib\angular.min.js"></script>
+   <script src="..\app\app.js"></script>
+</head>
+<br>
+<div class="content">
+ <form name="myForm" >
+    <div class="reg">
+       <h3>Login Page</h3>
+    </div>
+
+<div ng-controller="loginController">
+<br>
+  <label>
+    Email:
+      <input type="email" name="email" ng-model="user.email" required>
+      <div ng-show="myForm.username.$touched && myForm.username.$invalid">
+        <small style="color:red; display:block; text-align:left;">
+          Enter a valid name</small>
+      </div>
+  </label>
+  <br><br>
+
+  <label>
+    Password:
+      <input type="password" name="password" ng-model="user.password" required>
+  </label>
+  <br><br>
+
+   <button type="submit" class="btn btn-primary" name="reg_user">Login</button>
+ </form>
+
+  <tt>user = {{user}}</tt>
+    </div>
+   </div>
+  </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newApp">
+ <head>
+  <title>Spatlho App</title>
+  <link href="..\content\css\styles.css" rel="stylesheet" type="text/css" />
+  <script src="..\app\lib\angular.min.js"></script>
+  <script src="..\app\app.js"></script>
+ </head>
+<body>
+
+    <ng-include src="'header.html'"></ng-include>
+      <div class="content">
+        <div ng-controller ="order-successController">
+          <ul>
+            <li ng-repeat="order in orders">
+              {{order.cheese}}
+              {{order.polony}}
+              {{order.egg}}
+            </li>
+          </ul>
+<br>
+
+<form ng-submit="sendMessage()">
+Standard Spatlho from R15 with chips select extras from the menu below:
+<br><br><br>
+
+    <label> Add cheese:
+      <input type="checkbox" ng-model="item.cheese"
+           ng-true-value="'YES'" ng-false-value="'NO'">
+    </label>
+<br>
+    <label> Add polony:
+      <input type="checkbox" ng-model="item.polony"
+           ng-true-value="'YES'" ng-false-value="'NO'">
+    </label>
+<br>
+    <label> Add egg:
+      <input type="checkbox" ng-model="item.egg"
+           ng-true-value="'YES'" ng-false-value="'NO'">
+    </label>
+
+<input type="submit" value="Add items"/>
+</form>
+
+
+    <tt>cheese = {{item.cheese}}</tt><br/>
+      <tt>polony = {{item.polony}}</tt><br/>
+        <tt>egg = {{item.egg}}</tt><br/>
+
+</div>
+</div>
+  </body>
+</html>
